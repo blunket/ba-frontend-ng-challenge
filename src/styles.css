@@ -2,3 +2,23 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+table .mat-slide-toggle-bar {
+    height: 20px;
+    border-radius: 20px;
+}
+table .mat-slide-toggle-thumb {
+    background-color: #fff !important;
+    border: 2px solid #444;
+}
+table .mat-slide-toggle-thumb-container {
+    top: -2px;
+    left: -2px;
+}
+table .mat-slide-toggle .mat-slide-toggle-bar {
+    background-color: #fff;
+    border: 2px solid #444;
+}
+table .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+    background-color: #444;
+}

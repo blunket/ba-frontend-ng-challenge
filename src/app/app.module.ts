@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProjectsComponent } from './projects/projects.component';
 import { MatTableModule } from '@angular/material/table';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { LimitToPipe } from './limit-to.pipe';
 
 @NgModule({
@@ -17,6 +18,7 @@ import { LimitToPipe } from './limit-to.pipe';
     BrowserModule,
     BrowserAnimationsModule,
     MatTableModule,
+    MatSlideToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
