@@ -11,6 +11,7 @@ export class ProjectsComponent implements OnInit {
 
   projects: Project[];
   displayedColumns = ['id', 'title', 'status', 'start_date', 'active', 'assignee', 'percent_complete'];
+  expandedProject: Project | null;
 
   constructor(private projectService: ProjectService) { }
 

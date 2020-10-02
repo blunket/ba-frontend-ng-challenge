@@ -3,7 +3,7 @@ table {
 }
 
 table th,
-table td {
+table .project-row td {
     text-align: center;
 }
 
@@ -13,6 +13,10 @@ table th {
     font-size: 1em;
 }
 
-table tr:nth-child(odd) {
+tr.project-row.stripe {
     background-color: #eee;
+}
+
+tr.collapsible-row:not(.open) {
+    display: none;
 }
