@@ -20,3 +20,11 @@ tr.project-row.stripe {
 tr.collapsible-row:not(.open) {
     display: none;
 }
+
+.expand-col {
+    width: 40px;
+}
+
+.row-expand-button {
+    background-color: transparent;
+}
