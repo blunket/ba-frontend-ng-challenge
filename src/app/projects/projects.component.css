@@ -1,0 +1,18 @@
+table {
+    width: 100%;
+}
+
+table th,
+table td {
+    text-align: center;
+}
+
+table th {
+    background-color: #aaa;
+    color: #fff;
+    font-size: 1em;
+}
+
+table tr:nth-child(even) {
+    background-color: #eee;
+}

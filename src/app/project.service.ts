@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Project } from './project';
-import * as PROJECTS from './data.json';
+import { Observable, of } from 'rxjs';
+
+import * as data from './data.json';
+
+const PROJECTS: Project[] = (data as any).default;
 
 @Injectable({
   providedIn: 'root'
@@ -9,8 +13,9 @@ export class ProjectService {
 
   constructor() { }
 
-  getProjects(): Project[] {
-    return PROJECTS;
+  getProjects(): Observable<Project[]> {
+    console.log(PROJECTS);
+    return of(PROJECTS);
   }
 
 }
