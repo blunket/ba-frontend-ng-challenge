@@ -1,0 +1,36 @@
+<mat-card class="project-detail-card">
+  <mat-card-title>Details/Notes:</mat-card-title>
+  <mat-card-content>
+    <ul class="metadata-list">
+      <li><strong>Title:</strong> {{ project.title }}</li>
+      <li><strong>Status:</strong> {{ project.status }}</li>
+      <li><strong>Start Date:</strong> {{ project.start_date | date: 'fullDate' }}</li>
+      <li><strong>Active:</strong> {{ project.active == 'true' ? 'Yes' : 'No' }}</li>
+      <li><strong>Assigned To:</strong> {{ project.assignee }}</li>
+      <li><strong>Progress:</strong> {{ project.percent_complete }}%</li>
+    </ul>
+
+    <h2>Summary</h2>
+    <p>{{ project.details.summary }}</p>
+
+    <h2>Justification</h2>
+    <p>{{ project.details.justification }}</p>
+
+    <h2>Notes</h2>
+    <p *ngIf="project.notes.length === 0"><em class="text-muted">None yet!</em></p>
+    <mat-card *ngFor="let item of project.notes" class="project-notes-card">
+      {{ item.note }}
+      <button mat-icon-button color="warn" class="project-delete-button">
+        <mat-icon aria-hidden="false" aria-label="Delete This Note">
+          clear
+        </mat-icon>
+      </button>
+    </mat-card>
+    <div class="project-card-actions">
+      <button mat-flat-button color="primary">
+        <mat-icon>add</mat-icon>
+        Add Note
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>
