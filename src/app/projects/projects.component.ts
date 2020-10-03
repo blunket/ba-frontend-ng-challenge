@@ -24,4 +24,9 @@ export class ProjectsComponent implements OnInit {
       .subscribe(projects => this.projects = projects);
   }
 
+  toggleProjectState(project: Project): void {
+    // the active status is given as a string in data.json
+    const isActive = project.active === 'true' ? true : false;
+    project.active = `${!isActive}`;
+  }
 }
