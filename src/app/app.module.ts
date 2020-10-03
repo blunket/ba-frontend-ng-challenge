@@ -11,6 +11,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { LimitToPipe } from './limit-to.pipe';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
+import { NoteDialogComponent } from './note-dialog/note-dialog.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { MatCardModule } from '@angular/material/card';
     ProjectsComponent,
     LimitToPipe,
     ProjectDetailsComponent,
+    NoteDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +30,7 @@ import { MatCardModule } from '@angular/material/card';
     MatSlideToggleModule,
     MatIconModule,
     MatCardModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

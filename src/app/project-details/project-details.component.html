@@ -20,7 +20,8 @@
     <p *ngIf="project.notes.length === 0"><em class="text-muted">None yet!</em></p>
     <mat-card *ngFor="let item of project.notes" class="project-notes-card">
       {{ item.note }}
-      <button mat-icon-button color="warn" class="project-delete-button">
+      <button mat-icon-button color="warn" class="project-delete-button"
+        (click)="deleteNoteConfirm(item.note)">
         <mat-icon aria-hidden="false" aria-label="Delete This Note">
           clear
         </mat-icon>
