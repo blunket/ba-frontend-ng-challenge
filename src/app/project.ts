@@ -17,5 +17,5 @@ export interface Project {
     summary: string;
     justification: string;
   };
-  notes: object[];
+  notes: any[];
 }
