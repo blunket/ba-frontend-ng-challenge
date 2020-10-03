@@ -4,8 +4,11 @@
 </h2>
 <mat-dialog-content>
   <p>{{ data.content }}</p>
+  <textarea tabindex="1" *ngIf="data.type === 'add-note'" [(ngModel)]="data.note" cdkFocusInitial matInput></textarea>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
-  <button *ngIf="data.showCancelButton" mat-button mat-dialog-close>Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial [color]="data.actionButtonColor">{{ data.actionButtonText }}</button>
+  <button tabindex="3" *ngIf="data.showCancelButton" mat-button mat-dialog-close>Cancel</button>
+  <button tabindex="2" mat-flat-button
+    [mat-dialog-close]="data.type === 'add-note' ? data.note : true"
+    [color]="data.actionButtonColor">{{ data.actionButtonText }}</button>
 </mat-dialog-actions>

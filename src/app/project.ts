@@ -1,3 +1,5 @@
+import { ProjectNote } from './project-note';
+
 export interface Project {
   id: number;
   title: string;
@@ -17,5 +19,5 @@ export interface Project {
     summary: string;
     justification: string;
   };
-  notes: any[];
+  notes: ProjectNote[];
 }

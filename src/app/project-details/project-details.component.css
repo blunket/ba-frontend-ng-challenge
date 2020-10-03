@@ -24,6 +24,7 @@ mat-card {
 .project-notes-card {
   padding-right: 72px;
   margin: 5px 0px;
+  white-space: pre-line;
 }
 .project-delete-button {
   position: absolute;
