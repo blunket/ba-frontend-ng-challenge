@@ -39,7 +39,8 @@ export class ProjectDetailsComponent implements OnInit {
   }
 
   addNote(project: Project, note: string): void {
-    project.notes.push({ id: 15, note });
+    const id = this.genId(project.notes)
+    project.notes.push({ id, note });
   }
 
   editNote(note: ProjectNote): void {
@@ -86,4 +87,7 @@ export class ProjectDetailsComponent implements OnInit {
     this.project.notes.splice(i, 1);
   }
 
+  genId(notes: ProjectNote[]): number {
+    return notes.length > 0 ? Math.max(...notes.map(note => note.id)) + 1 : 11;
+  }
 }
