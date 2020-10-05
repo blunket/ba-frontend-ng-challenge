@@ -14,7 +14,6 @@ export class ProjectService {
   constructor() { }
 
   getProjects(): Observable<Project[]> {
-    console.log(PROJECTS);
     return of(PROJECTS);
   }
 
