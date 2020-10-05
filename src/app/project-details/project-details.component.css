@@ -22,9 +22,14 @@ mat-card {
   margin-bottom: 0px !important;
 }
 .project-notes-card {
-  padding-right: 72px;
+  padding-right: 128px;
   margin: 5px 0px;
   white-space: pre-line;
+}
+.project-edit-button {
+  position: absolute;
+  right: 72px;
+  top: calc(50% - 20px);
 }
 .project-delete-button {
   position: absolute;

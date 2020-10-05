@@ -42,6 +42,26 @@ export class ProjectDetailsComponent implements OnInit {
     project.notes.push({ id: 15, note });
   }
 
+  editNote(note: ProjectNote): void {
+    const noteDialogRef = this.dialog.open(NoteDialogComponent, {
+      data: {
+        icon: 'edit',
+        type: 'add-note',
+        title: 'Edit Note',
+        content: 'Edit your note below.',
+        actionButtonColor: 'primary',
+        actionButtonText: 'Save Note',
+        showCancelButton: true,
+        note: note.note,
+      }
+    });
+    noteDialogRef.afterClosed().subscribe(result => {
+      if (result?.trim().length > 0) {
+        note.note = result;
+      }
+    });
+  }
+
   deleteNoteConfirm(note: ProjectNote): void {
     const noteDialogRef = this.dialog.open(NoteDialogComponent, {
       data: {
@@ -63,7 +83,7 @@ export class ProjectDetailsComponent implements OnInit {
 
   deleteNote(note: ProjectNote): void {
     const i = this.project.notes.indexOf(note);
-    this.project.notes.splice(i, 1)
+    this.project.notes.splice(i, 1);
   }
 
 }
